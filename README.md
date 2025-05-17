@@ -87,7 +87,8 @@ JavaProject/
 ├── lib/                     # External libraries directory
 ├── .classpath               # Classpath file
 ├── .project                 # Project file
-└── .gitignore               # Git ignore file```
+└── .gitignore               # Git ignore file
+```
 
 ### Maven Project
 
