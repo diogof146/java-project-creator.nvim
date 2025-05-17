@@ -5,7 +5,6 @@ A Neovim plugin to easily create Java projects and Maven projects.
 ## Features
 
 - 🚀 Quick project creation with sensible defaults for Java development  
-- 🧩 Eclipse-compatible project structure generation  
 - 📦 Maven project support with custom group/artifact IDs  
 - 🖼️ Integration with [nui.nvim](https://github.com/MunifTanjim/nui.nvim) for a modern UI experience (optional)  
 - ⌨️ Customizable keybindings for fast project creation  
@@ -16,7 +15,7 @@ A Neovim plugin to easily create Java projects and Maven projects.
 
 ```lua
 use {
-  'yourusername/java-project-creator.nvim',
+  'diogof146/java-project-creator.nvim',
   requires = { 'MunifTanjim/nui.nvim' }, -- Optional but recommended for UI
   config = function()
     require('java-project-creator').setup({
@@ -30,7 +29,7 @@ use {
 
 ```lua
 {
-  'yourusername/java-project-creator.nvim',
+  'diogof146/java-project-creator.nvim',
   dependencies = { 'MunifTanjim/nui.nvim' }, -- Optional but recommended for UI
   config = function()
     require('java-project-creator').setup({
@@ -65,7 +64,7 @@ require('java-project-creator').setup({
 
 The plugin provides two main commands:
 
-- `:JavaCreateProject [name]` - Create a new Java project with Eclipse-like structure  
+- `:JavaCreateProject [name]` - Create a new Java project
 - `:MavenCreateProject [name]` - Create a new Maven project  
 
 ### Keybindings
@@ -77,17 +76,18 @@ Default keybindings (can be customized):
 
 ## Project Structures
 
-### Java Project (Eclipse-like)
+### Java Project
 
 ```
 JavaProject/
-├── src/             # Source code directory
-├── bin/             # Compiled classes directory
-├── lib/             # External libraries directory
-├── .classpath       # Eclipse classpath file
-├── .project         # Eclipse project file
-└── .gitignore       # Git ignore file
-```
+├── src/
+│   └── package/
+│       └── Main.java        # Entry point of the application
+├── bin/                     # Compiled classes directory
+├── lib/                     # External libraries directory
+├── .classpath               # Classpath file
+├── .project                 # Project file
+└── .gitignore               # Git ignore file```
 
 ### Maven Project
 
